@@ -4,6 +4,8 @@ import { Outlet, ScrollRestoration } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
 import * as React from "react";
 
+import globalCss from "../global.css?url";
+
 export const Route = createRootRouteWithContext<{
   queryClient: QueryClient;
 }>()({
@@ -18,6 +20,12 @@ export const Route = createRootRouteWithContext<{
       },
       {
         title: "Title Generator",
+      },
+    ],
+    links: [
+      {
+        rel: "stylesheet",
+        href: globalCss,
       },
     ],
   }),
